@@ -4,16 +4,28 @@ from time import sleep
 import random
 
 # get the proxies from proxy.txt and store it into proxy_list array
-# get a rendom proxy every time the while loop runs
-#
 
 proxy_list = []
 
 with open('proxy.txt') as fil:
     proxy_list = [i.strip() for i in fil]
 
-timeToReopenBrowser = 0
-while timeToReopenBrowser <= 3:
+# get input from user
+
+URL = input("enter youtube video URL ...\n")
+timeToReopenBrowser = input("Reopen the browser n times ...\n")
+videoLength = input("How long is the video?\n")
+
+# convert input to int
+
+timeToReopenBrowser = int(timeToReopenBrowser)
+videoLength = int(videoLength)
+
+# get a rendom proxy every time the while loop runs
+# open chrome and go to the URL link
+# wait for n secounds to close the browser and open it again
+i = 0
+while i < timeToReopenBrowser:
     proxies = random.choice(proxy_list)
     proxy_ip_port = proxies
 
@@ -32,14 +44,14 @@ while timeToReopenBrowser <= 3:
     # let's call the browser
 
     driver = webdriver.Chrome(desired_capabilities=capabilities)
-    driver.get("https://www.myip.com/")
+    driver.get(URL)
 
-    sleep(3)
+    sleep(videoLength)
 
     # close browser
 
     driver.quit()
 
-    timeToReopenBrowser += 1
+    i += 1
 
 # https://openproxy.space/api replace static proxies
