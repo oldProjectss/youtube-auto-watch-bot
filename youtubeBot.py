@@ -10,9 +10,9 @@ with open('proxy.txt') as fil:
     proxy_list = [i.strip() for i in fil]
 
 # get input from user
-URL = input("enter youtube video URL ...\n")
-timeToReopenBrowser = input("Reopen the browser n times ...\n")
-videoLength = input("How long is the video?\n")
+URL = input("enter youtube video URL ...\\n")
+timeToReopenBrowser = input("Reopen the browser n times ...\\n")
+videoLength = input("How long is the video?\\n")
 
 # convert input to int
 timeToReopenBrowser = int(timeToReopenBrowser)
