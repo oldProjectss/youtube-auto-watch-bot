@@ -8,15 +8,16 @@
 
 #### Install
 
-- sudo apt install python-pip
-- pip install -r requirment.txt
+- sudo apt install chromium-chromedriver
+- sudo apt install python3-pip
+- pip3 install -r requirment.txt
 
 #### usage
 
-- python youtubeBot.py
-- enter the url of your video
-- enter how many time you want the video to be watched
-- enter the length of the video or how many secounds you want the video to be watched etch time
+- python3 youtubeBot.py
+- enter the URL of your video
+- enter how many times you want the video to be watched
+- enter the length of the video or how many seconds you want the video to be watched each time
 
 ### Built with
 
